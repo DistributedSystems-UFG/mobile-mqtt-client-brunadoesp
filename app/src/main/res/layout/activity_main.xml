@@ -6,6 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/buttonPublish5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="lightOFF"
+        android:text="OFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubscribe" />
+
+    <TextView
+        android:id="@+id/textViewTopicNameSub2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="244dp"
+        android:text="Luzes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewValue" />
+
     <TextView
         android:id="@+id/textViewTopic"
         android:layout_width="wrap_content"
@@ -21,10 +43,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toEndOf="@+id/textViewTopic"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,61 +74,68 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTopicName" />
 
     <Button
-        android:id="@+id/buttonPublish"
+        android:id="@+id/buttonPublish2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:onClick="publishMessage"
         android:text="Publish"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextValue" />
 
-    <TextView
-        android:id="@+id/textViewTopicNameSub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="190dp"
-        android:text="Topic:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewValue" />
 
     <EditText
         android:id="@+id/editTextTopicNameSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textViewTopicNameSub"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPublish" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPublish2" />
+
+    <TextView
+        android:id="@+id/textViewTopicNameSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="112dp"
+        android:text="Topic:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewValue" />
 
     <Button
         android:id="@+id/buttonSubscribe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:onClick="sendSubscription"
         android:text="Subscribe"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTopicNameSub" />
 
-    <EditText
-        android:id="@+id/editTextMultiLineSubMsg"
+    <ListView
+        android:id="@+id/minhaLista"
+        android:layout_width="378dp"
+        android:layout_height="652dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPublish5"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <Button
+        android:id="@+id/buttonPublish3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSubscribe"
-        tools:text="Subscribed message will appear here." />
-
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="28dp"
+        android:onClick="lightON"
+        android:text="ON"
+        app:layout_constraintStart_toEndOf="@+id/textViewTopicNameSub2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubscribe" />
 </androidx.constraintlayout.widget.ConstraintLayout>
